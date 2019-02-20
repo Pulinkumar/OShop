@@ -1,0 +1,19 @@
+<h2>Orders</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders$ | async">
+      <td>{{ order.userId }}</td>
+      <td>{{ order.dateCreated | date:"MM/dd/yyyy" }}</td>
+      <td>
+        <a href="">View</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
